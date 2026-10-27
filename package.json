@@ -1,0 +1,17 @@
+{
+  "name": "blog-platform-root",
+  "version": "1.0.0",
+  "description": "Full-Stack Modern Blog Platform with Comments",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run server\" \"npm run client\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  }
+}
